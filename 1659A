@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+	ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+	int t; cin >> t;
+	while(t--){
+		int n , red , blue;
+		cin >> n >> red >> blue ;
+		while(blue >= 0){
+			for(int i = 0; i < red / (blue+1); i++){
+				cout << 'R';
+			}
+			if(blue > 0){
+				cout << 'B';
+			}
+			red = red -(red / (blue+1));
+			blue--;
+		} cout << '\n';
+	}
+}
